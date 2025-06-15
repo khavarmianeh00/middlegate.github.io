@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>قیمت لحظه‌ای</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        async function fetchPrices() {
+            const gold = await fetch('https://api.exchangerate.host/latest?base=USD').then(res => res.json());
+            const usdRate = gold.rates.IRR;
+            document.getElementById("usd").innerText = Math.round(usdRate).toLocaleString() + " ریال";
+        }
+        window.onload = fetchPrices;
+    </script>
+</head>
+<body>
+    <header><h1>💹 قیمت لحظه‌ای</h1></header>
+    <main>
+        <p>💵 قیمت دلار: <span id="usd">در حال دریافت...</span></p>
+        <p>📌 قیمت طلا و نفت به‌زودی اضافه خواهد شد...</p>
+    </main>
+    <nav><a href="index.html">بازگشت</a></nav>
+    <footer><p>© 2024 MiddleGate</p></footer>
+</body>
+</html>
