@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="قیمت‌های لحظه‌ای نفت، طلا، دلار و محصولات پتروشیمی - MiddleGate">
+  <meta name="keywords" content="قیمت نفت, قیمت طلا, نرخ دلار, پتروشیمی, MiddleGate">
+  <title>قیمت‌های لحظه‌ای - MiddleGate</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="لوگوی MiddleGate" width="100">
+    </a>
+    <h1>قیمت‌های لحظه‌ای</h1>
+    <nav aria-label="منوی اصلی">
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره ما</a>
+      <a href="contact.html">تماس با ما</a>
+      <a href="prices.html">قیمت‌ها</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>قیمت لحظه‌ای طلا</h2>
+      <iframe src="https://www.gold-price-ticker.info/widget/" width="100%" height="200" frameborder="0" loading="lazy"></iframe>
+    </section>
+    <section>
+      <h2>قیمت نفت خام</h2>
+      <iframe src="https://ssltools.forexprostools.com/quotes_widget/widgets.php?pair_ID=8849&width=100%&height=300&lang=fa" width="100%" height="300" frameborder="0" loading="lazy"></iframe>
+    </section>
+    <section>
+      <h2>نرخ دلار</h2>
+      <iframe src="https://www.tgju.org/chart/price_dollar_rl" width="100%" height="300" frameborder="0" loading="lazy"></iframe>
+    </section>
+    <section class="petrochemicals">
+      <h2>محصولات پتروشیمی</h2>
+      <p>برای دریافت قیمت‌های به‌روز، با ما تماس بگیرید.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>محصول</th>
+            <th>نوع</th>
+            <th>کاربرد</th>
+            <th>وضعیت قیمت</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>پلی‌اتیلن</td>
+            <td>HDPE</td>
+            <td>تولید لوله، فیلم پلاستیکی</td>
+            <td><a href="contact.html" class="btn">استعلام قیمت</a></td>
+          </tr>
+          <tr>
+            <td>متانول</td>
+            <td>گرید صنعتی</td>
+            <td>تولید فرمالدهید، سوخت</td>
+            <td><a href="contact.html" class="btn">استعلام قیمت</a></td>
+          </tr>
+          <tr>
+            <td>پروپیلن</td>
+            <td>گرید پلیمری</td>
+            <td>تولید پلاستیک، فیبر</td>
+            <td><a href="contact.html" class="btn">استعلام قیمت</a></td>
+          </tr>
+          <tr>
+            <td>بنزن</td>
+            <td>گرید خالص</td>
+            <td>تولید استایرن، مواد شیمیایی</td>
+            <td><a href="contact.html" class="btn">استعلام قیمت</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>© 2023-2025 MiddleGate. تمام حقوق محفوظ است.</p>
+  </footer>
+  <script>
+    document.querySelectorAll('iframe').forEach(iframe => {
+      iframe.onerror = () => {
+        iframe.insertAdjacentHTML('afterend', '<p style="color: red;">خطا در بارگذاری ویجت</p>');
+      };
+    });
+  </script>
+</body>
+</html>
