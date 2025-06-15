@@ -3,8 +3,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}<div id="google_translate_element" style="position: fixed; top: 10px; left: 10px; z-index: 999;"></div>
 
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'fa',
+    includedLanguages: 'fa,en,ar',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');}
+</script>
+
+<script type="text/javascript"
+ src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+}
 body {
   font-family: 'Tajawal', sans-serif;
   background-color: #1a1a1a;
