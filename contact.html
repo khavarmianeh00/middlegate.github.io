@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با ما - MiddleGate</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تماس با ما - MiddleGate</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>فرم تماس با MiddleGate</h1>
-    </header>
-    <main>
-        <form action="https://formsubmit.co/0f2d23207c36419f3b8fbd3d05f4baad" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="پیام جدید از سایت MiddleGate">
-
-            <label for="name">نام:</label><br>
-            <input type="text" name="name" id="name" required><br><br>
-
-            <label for="email">ایمیل:</label><br>
-            <input type="email" name="email" id="email" required><br><br>
-
-            <label for="subject">موضوع:</label><br>
-            <input type="text" name="subject" id="subject"><br><br>
-
-            <label for="message">متن پیام:</label><br>
-            <textarea name="message" id="message" rows="5" required></textarea><br><br>
-
-            <button type="submit">📩 ارسال پیام</button>
-        </form>
-    </main>
+  <header>
+    <h1>تماس با ما</h1>
     <nav>
-        <a href="index.html">بازگشت به صفحه اصلی</a>
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره ما</a>
+      <a href="prices.html">قیمت‌ها</a>
     </nav>
-    <footer>
-        <p>© 2024 MiddleGate. تمام حقوق محفوظ است.</p>
-    </footer>
-<div id="google_translate_element" style="position: fixed; top: 10px; left: 10px; z-index: 999;"></div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'fa',
-    includedLanguages: 'fa,en,ar',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript"
- src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script> </body>
+  </header>
+  <main>
+    <form action="https://formsubmit.co/0f2d23207c36419f3b8fbd3d05f4baad" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="پیام جدید از سایت MiddleGate">
+      <label>نام:</label><br>
+      <input type="text" name="name" required><br><br>
+      <label>ایمیل:</label><br>
+      <input type="email" name="email" required><br><br>
+      <label>پیام:</label><br>
+      <textarea name="message" rows="5" required></textarea><br><br>
+      <button type="submit">ارسال</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2025 MiddleGate. تمام حقوق محفوظ است.</p>
+  </footer>
+</body>
 </html>
