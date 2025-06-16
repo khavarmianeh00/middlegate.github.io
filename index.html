@@ -1,70 +1,35 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ارتباط با MiddleGate - دروازه طلایی تجارت انرژی">
-  <meta name="keywords" content="تماس, پیام, تجارت انرژی, پتروشیمی, طلا, MiddleGate">
-  <meta name="robots" content="index, follow">
-  <title>صندوق پیام - MiddleGate</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiddleGate Trade | Home</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="لوگوی MiddleGate" width="100">
-    </a>
-    <h1>صندوق پیام</h1>
-    <nav aria-label="منوی اصلی">
-      <a href="index.html">خانه</a>
-      <a href="about.html">درباره ما</a>
-      <a href="contact.html">تماس با ما</a>
-      <a href="prices.html">قیمت‌ها</a>
-      <a href="inbox.html">صندوق پیام</a>
+    <h1>MiddleGate Trade 🌐</h1>
+    <p>The Gateway to Energy, Oil, Gold & Trade in the Middle East</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../prices.html">Prices</a>
     </nav>
   </header>
   <main>
-    <section class="inbox">
-      <h2>ارتباط با MiddleGate</h2>
-      <p>برای همکاری در تجارت نفت، گاز، پتروشیمی، طلا یا سایر محصولات، پیام خود را از طریق فرم زیر ارسال کنید.</p>
-      <form action="https://formsubmit.co/your-email@example.com" method="POST">
-        <input type="hidden" name="_subject" value="پیام جدید از صندوق MiddleGate">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://khavarmianeh00.github.io/middlegate/inbox.html#thank-you">
-        <label for="name">نام و نام خانوادگی:</label>
-        <input type="text" id="name" name="name" placeholder="نام شما" required>
-        <label for="email">ایمیل:</label>
-        <input type="email" id="email" name="email" placeholder="ایمیل شما" required>
-        <label for="subject">موضوع:</label>
-        <select id="subject" name="subject" required>
-          <option value="" disabled selected>انتخاب کنید</option>
-          <option value="نفت">استعلام قیمت نفت</option>
-          <option value="گاز">استعلام قیمت گاز</option>
-          <option value="پتروشیمی">استعلام قیمت پتروشیمی</option>
-          <option value="طلا">استعلام قیمت طلا</option>
-          <option value="سایر">سایر درخواست‌ها</option>
-        </select>
-        <label for="message">پیام:</label>
-        <textarea id="message" name="message" placeholder="جزئیات درخواست خود را بنویسید" rows="6" required></textarea>
-        <button type="submit" class="btn">ارسال پیام</button>
-      </form>
-      <div id="thank-you" style="display: none;">
-        <h3>پیام شما دریافت شد!</h3>
-        <p>تیم MiddleGate به زودی با شما تماس خواهد گرفت.</p>
-        <a href="index.html" class="btn">بازگشت به خانه</a>
-      </div>
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>International Gold Trade</li>
+        <li>Live Oil & Energy Market</li>
+        <li>Currency Analysis & Dollar Price</li>
+        <li>Export Consultation for Arab Countries</li>
+      </ul>
     </section>
   </main>
   <footer>
-    <p>© 2023-2025 MiddleGate. تمام حقوق محفوظ است.</p>
+    <p>© 2025 MiddleGate. All rights reserved.</p>
   </footer>
-  <script>
-    // نمایش پیام تشکر بعد از ارسال فرم
-    if (window.location.hash === '#thank-you') {
-      document.getElementById('thank-you').style.display = 'block';
-      document.querySelector('form').style.display = 'none';
-    }
-  </script>
-</body>https://github.com/khavarmianeh00/middlegate.github.io/blob/50db66cf3ee12b1681c80e6690ef03049d9181e5/index.html#L69
+</body>
 </html>
