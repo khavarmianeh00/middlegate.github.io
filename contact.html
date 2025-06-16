@@ -1,34 +1,41 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - MiddleGate</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - MiddleGate</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
+    <header>
+        <h1>فرم تماس با MiddleGate</h1>
+    </header>
+    <main>
+        <form action="https://formsubmit.co/ali.jenadeleh.petroleum1060@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="پیام جدید از فرم تماس MiddleGate">
+
+            <label for="name">نام:</label><br>
+            <input type="text" name="name" id="name" required><br><br>
+
+            <label for="email">ایمیل:</label><br>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="subject">موضوع:</label><br>
+            <input type="text" name="subject" id="subject"><br><br>
+
+            <label for="message">پیام شما:</label><br>
+            <textarea name="message" id="message" rows="5" required></textarea><br><br>
+
+            <button type="submit">ارسال پیام</button>
+        </form>
+    </main>
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="prices.html">Live Prices</a>
+        <a href="index.html">بازگشت به صفحه اصلی</a>
     </nav>
-  </header>
-  <main>
-    <form action="https://formsubmit.co/0f2d23207c36419f3b8fbd3d05f4baad" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Message from MiddleGate Website">
-      <label>Name:</label><br>
-      <input type="text" name="name" required><br><br>
-      <label>Email:</label><br>
-      <input type="email" name="email" required><br><br>
-      <label>Message:</label><br>
-      <textarea name="message" rows="5" required></textarea><br><br>
-      <button type="submit">Send</button>
-    </form>
-  </main>
-  <footer>
-    <p>© 2025 MiddleGate. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>© 2024 MiddleGate Trade. تمام حقوق محفوظ است.</p>
+    </footer>
 </body>
 </html>
