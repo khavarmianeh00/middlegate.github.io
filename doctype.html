@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد دمو بروکر نفت و گاز</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            color: #f5f5f5;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 30px;
+        }
+
+        .widget {
+            background: rgba(255, 255, 255, 0.95);
+            color: #111;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .widget::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #f06595, #845ef7);
+        }
+
+        .widget h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .data-box {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 15px 0;
+        }
+
+        button {
+            padding: 8px 20px;
+            background-color: #302b63;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #24243e;
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="widget">
+            <h2>نرخ لحظه‌ای نفت خام</h2>
+            <p>قیمت شبیه‌سازی شده نفت WTI و برنت در زمان واقعی.</p>
+            <div class="data-box" id="priceBox">در حال بارگذاری...</div>
+            <button onclick="updatePrice()">به‌روزرسانی نرخ</button>
+        </div>
+
+        <div class="widget">
+            <h2>نمودار تغییر قیمت ۲۴ ساعت اخیر</h2>
+            <canvas id="oilChart" height="200"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // قیمت ساختگی اولیه
+        let currentPrice = 84 + Math.random() * 10;
+
+        function updatePrice() {
+            currentPrice = 84 + Math.random() * 10;
+            document.getElementById("priceBox").innerText = `نفت برنت: ${currentPrice.toFixed(2)} دلار`;
+            addPointToChart(currentPrice);
+        }
+
+        // داده‌های شبیه‌سازی‌شده برای ۲۴ ساعت
+        const labels = Array.from({ length: 24 }, (_, i) => `${i}:00`);
+        const data = Array.from({ length: 24 }, () => (80 + Math.random() * 10).toFixed(2));
+
+        const ctx = document.getElementById('oilChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'قیمت نفت (USD)',
+                    data,
+                    borderColor: '#f06595',
+                    backgroundColor: 'rgba(240, 101, 149, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            font: {
+                                family: 'Vazir'
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+
+        function addPointToChart(newPrice) {
+            chart.data.labels.push(new Date().getHours() + ":00");
+            chart.data.datasets[0].data.push(newPrice.toFixed(2));
+            if (chart.data.labels.length > 24) {
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+            chart.update();
+        }
+
+        // بارگذاری اولیه
+        updatePrice();
+    </script>
+
+</body>
+</html>
