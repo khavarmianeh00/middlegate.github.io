@@ -1,75 +1,0 @@
-<!-- فرم درخواست قیمت -->
-        <div class="widget fade-in">
-            <h3 class="widget-title">
-                💼 <span data-translate="quote-request-title">درخواست قیمت</span>
-            </h3>
-            <form id="quote-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label data-translate="product-type">نوع محصول:</label>
-                        <select id="product-type" required>
-                            <option value="" data-translate="select-option">انتخاب کنید</option>
-                            <option value="crude-oil-light" data-translate="crude-oil-light">نفت خام سبک</option>
-                            <option value="crude-oil-heavy" data-translate="crude-oil-heavy">نفت خام سنگین</option>
-                            <option value="natural-gas" data-translate="natural-gas">گاز طبیعی</option>
-                            <option value="lng" data-translate="lng">گاز مایع (LNG)</option>
-                            <option value="lpg" data-translate="lpg">گاز مایع (LPG)</option>
-                            <option value="gasoline" data-translate="gasoline">بنزین</option>
-                            <option value="diesel" data-translate="diesel">گازوئیل</option>
-                            <option value="fuel-oil" data-translate="fuel-oil">نفت کوره</option>
-                            <option value="naphtha" data-translate="naphtha">نفتا</option>
-                            <option value="bitumen" data-translate="bitumen">قیر</option>
-                            <option value="gold-bars" data-translate="gold-bars">شمش طلا</option>
-                            <option value="gold-coins" data-translate="gold-coins">سکه طلا</option>
-                            <option value="gold-powder" data-translate="gold-powder">پودر طلا</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label data-translate="quantity">مقدار:</label>
-                        <input type="number" id="quantity" placeholder="1000" min="1" required>
-                        <small data-translate="quantity-note">تن برای نفت/گاز، اونس برای طلا</small>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label data-translate="company-name-label">نام شرکت:</label>
-                        <input type="text" id="company" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-translate="country">کشور:</label>
-                        <select id="country" required>
-                            <option value="" data-translate="select-country">انتخاب کشور</option>
-                            <option value="IR" data-translate="iran">ایران</option>
-                            <option value="IQ" data-translate="iraq">عراق</option>
-                            <option value="KW" data-translate="kuwait">کویت</option>
-                            <option value="SA" data-translate="saudi">عربستان سعودی</option>
-                            <option value="AE" data-translate="uae">امارات</option>
-                            <option value="QA" data-translate="qatar">قطر</option>
-                            <option value="OM" data-translate="oman">عمان</option>
-                            <option value="BH" data-translate="bahrain">بحرین</option>
-                            <option value="TR" data-translate="turkey">ترکیه</option>
-                            <option value="other" data-translate="other">سایر</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label data-translate="description">توضیحات اضافی:</label>
-                    <textarea id="description" rows="3" placeholder=""></textarea>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label data-translate="full-name">نام و نام خانوادگی:</label>
-                        <input type="text" id="fullname" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-translate="phone">شماره تماس:</label>
-                        <input type="tel" id="phone" placeholder="+98 912 345 6789" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label data-translate="email">ایمیل:</label>
-                    <input type="email" id="email" placeholder="email@company.com" required>
-                </div>
-                <button type="submit" class="btn btn-success" data-translate="submit-request">ارسال درخواست قیمت</button>
-            </form>
-        </div>
